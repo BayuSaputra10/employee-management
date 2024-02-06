@@ -1,0 +1,20 @@
+
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+  background-image: url('./assets/images/login.jpeg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+

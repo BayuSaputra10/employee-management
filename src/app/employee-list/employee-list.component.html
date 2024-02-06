@@ -1,0 +1,96 @@
+<div class="container mt-4">
+  <h2>Employee List</h2>
+
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <label for="itemsPerPage">Items per Page:</label>
+      <select
+        id="itemsPerPage"
+        [(ngModel)]="itemsPerPage"
+        (change)="updateDisplayedEmployees()"
+        class="form-select"
+      >
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+      </select>
+    </div>
+
+    <div class="col-md-6">
+      <label for="search">Search:</label>
+      <input
+        type="text"
+        id="search"
+        [(ngModel)]="searchTerm"
+        (input)="search()"
+        class="form-control"
+      />
+    </div>
+  </div>
+
+  <button class="btn btn-primary my-3" (click)="goToAddEmployeePage()">
+    Add Employee
+  </button>
+
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th (click)="sort('username')">Username</th>
+          <th (click)="sort('firstName')">First Name</th>
+          <th (click)="sort('lastName')">Last Name</th>
+          <th (click)="sort('email')">Email</th>
+          <th (click)="sort('birthDate')">Birth Date</th>
+          <th (click)="sort('status')">Status</th>
+          <th (click)="sort('group')">Group</th>
+          <th (click)="sort('basicSalary')">Basic Salary</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of displayedEmployees">
+          <td>{{ employee.username }}</td>
+          <td>{{ employee.firstName }}</td>
+          <td>{{ employee.lastName }}</td>
+          <td>{{ employee.email }}</td>
+          <td>{{ employee.birthDate | date }}</td>
+          <td>{{ employee.status }}</td>
+          <td>{{ employee.group }}</td>
+          <td>{{ formatSalary(employee.basicSalary) }}</td>
+          <td>
+            <button
+              class="btn btn-warning btn-sm"
+              (click)="editEmployee(employee)"
+            >
+              Edit
+            </button>
+            <button
+              class="btn btn-danger btn-sm"
+              (click)="deleteEmployee(employee)"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="d-flex justify-content-between">
+    <button
+      class="btn btn-secondary"
+      (click)="previousPage()"
+      [disabled]="currentPage === 1"
+    >
+      Previous
+    </button>
+    <span>{{ currentPage }} / {{ totalPages }}</span>
+    <button
+      class="btn btn-secondary"
+      (click)="nextPage()"
+      [disabled]="currentPage === totalPages"
+    >
+      Next
+    </button>
+  </div>
+</div>

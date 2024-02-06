@@ -1,0 +1,16 @@
+
+.navbar-light.bg-transparent {
+  background-color: transparent;
+}
+
+.navbar-light.bg-transparent .nav-link {
+  color: #000; 
+  transition: color 0.3s ease; 
+}
+
+.navbar-light.bg-transparent .nav-link:hover {
+  color: #fff;
+  border: #000;
+}
+
+
