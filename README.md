@@ -1,27 +1,51 @@
 # AppEmployee
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.6.
+Projek ini dibuat oleh **Bayu Saputra** menggunakan [Angular CLI](https://github.com/angular/angular-cli) versi 16.2.6.
 
-## Development server
+## Server Pengembangan
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Jalankan `ng serve` untuk memulai server pengembangan. Akses ke `http://localhost:4200/`. Aplikasi akan secara otomatis memuat ulang jika ada perubahan pada berkas sumber.
 
-## Code scaffolding
+## Pembingkaian Kode
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Jalankan `ng generate component nama-komponen` untuk membuat komponen baru. Anda juga dapat menggunakan `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Pembangunan
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Jalankan `ng build` untuk membangun proyek. Berkas hasil pembangunan akan disimpan di direktori `dist/`.
 
-## Running unit tests
+## Menjalankan Uji Unit
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Jalankan `ng test` untuk menjalankan uji unit melalui [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Menjalankan Uji Akhir-ke-Akhir
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Jalankan `ng e2e` untuk menjalankan uji akhir-ke-akhir melalui platform pilihan Anda. Untuk menggunakan perintah ini, Anda perlu menambahkan paket yang mengimplementasikan kemampuan uji akhir-ke-akhir.
 
-## Further help
+## Kredensial Login
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Untuk mengakses aplikasi, gunakan kredensial login berikut:
+- Nama Pengguna: user
+- Kata Sandi: rahasia
+
+## Fitur Tambahan
+
+### Sorting
+
+Anda dapat menyortir tabel dengan mengklik nama kolom tabel yang diinginkan.
+
+### Paging
+
+Aplikasi ini dilengkapi dengan fitur paging untuk memudahkan navigasi melalui data. Anda dapat menggunakan tombol navigasi atau memasukkan nomor halaman secara langsung.
+
+### List Per Item
+
+Setiap item dalam tabel dapat diperluas untuk menampilkan informasi lebih lanjut atau tindakan tambahan. Cukup klik pada item yang diinginkan untuk melihat rincian lebih lanjut.
+
+## Identitas Pembuat
+
+**Bayu Saputra**
+
+## Bantuan Lanjutan
+
+Untuk mendapatkan bantuan lebih lanjut mengenai Angular CLI, gunakan `ng help` atau kunjungi halaman [Angular CLI Overview and Command Reference](https://angular.io/cli).
